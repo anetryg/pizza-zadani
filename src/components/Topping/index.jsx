@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Check from "../Check";
-import './style.css';
+import "./style.css";
 
-const Topping = ({ topping }) => {
+const Topping = ({ topping, hadleCheckChange }) => {
   return (
     <div className="topping">
-      <Check />
+      <Check value={topping.checked} onChange={hadleCheckChange} />
       <span className="topping__content">
         {topping.name}: {topping.price} €
       </span>
